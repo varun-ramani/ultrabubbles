@@ -8,13 +8,13 @@
 blub_left=''
 blub_right=''
 
-prompt_symbol='-->'
+prompt_symbol=''
 
-user_symbol='%n'
+user_symbol=' %n'
 user_machine_symbol=' גּ '
-machine_symbol='%M'
+machine_symbol=' %M'
 
-filepath_symbol='%~'
+filepath_symbol=' %~'
 
 git_branch_symbol=''
 git_clean_symbol=''
@@ -31,16 +31,16 @@ ssh_symbol='ssh'
 
 # COLOR CONSTANTS
 # NOTE: Possible values include zsh-color-strings like 'red', 'black', 'magenta' etc. Aswell as zsh-color-codes which you can list with the command 'spectrum_ls', e.g. '078' for the 78th color code.
-bubble_color='black'
+bubble_color='016'
 
 prompt_symbol_color='blue'
 prompt_symbol_error_color='red'
 
-user_color='yellow'
+user_color='123'
 user_machine_symbol_color='green'
-machine_color='magenta'
+machine_color='111'
 
-filepath_color='blue'
+filepath_color='214'
 
 git_clean_color='green'
 git_unstaged_color='yellow'
@@ -181,7 +181,9 @@ end_of_prompt_bubble="$bubble_left%(?,$(foreground $prompt_symbol_color)$prompt_
 
 end_of_prompt=" %(?,$(foreground $prompt_symbol_color)$prompt_symbol,$(foreground $prompt_symbol_error_color)$prompt_symbol%{$reset_color%}) "
 
-user_machine_bubble="$bubble_left$(foreground $user_color)$user_symbol$(foreground $user_machine_symbol_color)$user_machine_symbol$(foreground $machine_color)$machine_symbol$bubble_right"
+
+user_bubble="$bubble_left$(foreground $user_color)$user_symbol$bubble_right"
+machine_bubble="$bubble_left$(foreground $machine_color)$machine_symbol$bubble_right"
 
 filepath_bubble="$bubble_left$(foreground $filepath_color)$filepath_symbol$bubble_right"
 
@@ -202,6 +204,6 @@ _newline=$'\n'
 _lineup=$'\e[1A'
 _linedown=$'\e[1B'
 
-PROMPT='$(ssh_bubble)$user_machine_bubble$filepath_bubble$_newline$end_of_prompt%{$reset_color%}'
+PROMPT='$(ssh_bubble)$user_bubble$machine_bubble$filepath_bubble$_newline$end_of_prompt%{$reset_color%}'
 RPROMPT='%{$_lineup%}$(git_bubble)$error_code_bubble%{$_linedown%}%{$reset_color%}'
 

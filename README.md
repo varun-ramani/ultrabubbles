@@ -1,25 +1,7 @@
-# Bubblified zsh-theme
-
-![bubblified.gif](https://raw.githubusercontent.com/hohmannr/bubblified/master/pics/bubblified.gif)
-
-A zsh-theme inspired by [agnoster](https://github.com/agnoster/agnoster-zsh-theme) and [bubblewritten](https://github.com/paracorde/dots/blob/master/bubblewritten.zsh-theme).
-
-**Best used with [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) and powered by [nerdfronts](https://github.com/ryanoasis/nerd-fonts)**
-
-## Installation
-
-### Antigen
-
-Place the following line in the [right](https://github.com/zsh-users/antigen) spot of your `.zshrc`
-
-```
-antigen theme hohmannr/bubblified
-```
+# UltraBubbles ZSH theme
 
 
-### Manual
-
-***Assuming you are using ohmyzsh***.
+## Installation with OH MY ZSH
 
 Get the sourcefile
 ```
