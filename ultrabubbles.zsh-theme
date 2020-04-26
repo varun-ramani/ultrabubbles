@@ -31,7 +31,7 @@ ssh_symbol='ssh'
 
 # COLOR CONSTANTS
 # NOTE: Possible values include zsh-color-strings like 'red', 'black', 'magenta' etc. Aswell as zsh-color-codes which you can list with the command 'spectrum_ls', e.g. '078' for the 78th color code.
-bubble_color='016'
+bubble_color='233'
 
 prompt_symbol_color='blue'
 prompt_symbol_error_color='red'
